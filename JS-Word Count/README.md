@@ -1,4 +1,4 @@
-## Banck Account
+## Word Count
 
 ### Instructions
 
