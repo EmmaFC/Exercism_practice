@@ -1,19 +1,46 @@
+export function countWords (str) {
 
-let phrase = `"That's the password: 'PASSWORD 123'!", cried the Special Agent.\nSo I fled.`
+    console.log(str);
+    let x = str.toLowerCase()
+    let RegExp = /[^'0123456789abcdefghijklmnñopqrstuvwxyz]/gi;
+    let whiteSpace = /\s\s+/g;
+    let strArray = x.split(RegExp).join(' ').trim().replace(whiteSpace,' ').split(' ');
+    console.log(strArray);
 
-function countWords (str){
-    let words = str.split(' ').join().split(/[.*+?!¡"^${}()|[\]\\]/gi);
-    let other =words
-   /*  words.forEach((word) =>{
-       let eachWord = RegExp(word)
-    }) */
-    console.log(other);
-  /*   let resultStr = words.unique();
-    console.log(resultStr.length) */
-    /* 
-    let resultStr = RegExp(str);
-    console.log(resultStr); */
+let matchArray = [];
+let copyArray = strArray
+let countSame =0
+let countOther = 0
+    strArray.forEach((word)=>{
 
+      for (let i = 0; i<strArray.length; i++){
+
+        copyArray.forEach((otherWord)=>{
+
+          if(otherWord === word){
+            if(matchArray.includes(otherWord)){
+              console.log(word+'····'+otherWord)
+              console.log(true)
+/*               return countSame +1
+ */            }
+            matchArray.push(otherWord)
+            console.log(word+'····'+otherWord)
+            console.log(true)
+            /* return countSame +1 */
+          }
+      /*     else {
+            console.log(word+'----'+otherWord)
+            console.log(false)
+            return countOther +1
+          } */
+        
+      })
+
+      
+    }
+
+  })
+
+    console.log(matchArray)
 
 } 
-countWords (phrase)
