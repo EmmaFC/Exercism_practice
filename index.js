@@ -1,6 +1,8 @@
 import {BankAccount} from './JS-Bank Account/kata_01.js';
 import {countWords} from './JS-Word Count/kata_02.js';
 import {numberClassiffy} from './JS-Perfect Numbers/kata_03.js'; 
+import {transpose} from './JS-Transpose/kata_04.js'; 
+
 
 function app () {
 
@@ -18,6 +20,9 @@ function app () {
     numberClassiffy(6);
     numberClassiffy(12);
     numberClassiffy(8);
+    /////////////// KATA 04
+    const arr = ['A', '1']
+    transpose (arr)
 }
 
 app ()
