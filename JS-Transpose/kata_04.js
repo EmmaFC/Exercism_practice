@@ -14,8 +14,6 @@ export const transpose = (arr) => {
 
     if(arr.length > 1){
 
-
-
     arr.forEach((item)=>{
 
        let newArray = Array.from(item)
@@ -37,12 +35,10 @@ export const transpose = (arr) => {
             }
         }
         
-        }
-       
-                
-       
-   
-    })}
+        
+          
+    })
+}
     console.log(new_matrix)
     return new_matrix
     
